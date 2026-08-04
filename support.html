@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WNN Support — Contact, subscriptions, and troubleshooting</title>
+<meta name="description" content="Support for WNN: how to reach us, how to cancel or get a refund on a subscription, how to restore purchases, and fixes for common blocking problems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0B0D10;--raise:#12151A;--line:#242A33;--bone:#E9E7E2;--mute:#868D97;
+  --brass:#C9A961;--brass-soft:rgba(201,169,97,.10);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--bone);
+  font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:17px;line-height:1.68;-webkit-font-smoothing:antialiased}
+a{color:var(--brass)}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 28px}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(11,13,16,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:20px}
+.brand{font-family:"IBM Plex Sans Condensed",sans-serif;font-weight:700;font-size:20px;letter-spacing:.14em;text-decoration:none;color:var(--bone)}
+.brand span{color:var(--brass)}
+.navlinks{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.navlinks a{color:var(--mute);text-decoration:none;padding:4px 0;border-bottom:1px solid transparent;transition:color .18s,border-color .18s}
+.navlinks a:hover,.navlinks a:focus-visible{color:var(--bone);border-color:var(--brass)}
+.navlinks a[aria-current="page"]{color:var(--bone)}
+
+h1,h2,h3,h4{font-family:"IBM Plex Sans Condensed",sans-serif;font-weight:700;letter-spacing:-.01em;line-height:1.14;margin:0}
+h1{font-size:clamp(36px,5.4vw,56px)}
+h2{font-size:clamp(24px,3vw,32px);margin-bottom:6px}
+h3{font-size:20px;font-weight:600;margin-bottom:4px}
+h4{font-size:17px;font-weight:600;letter-spacing:0}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin:0 0 20px}
+
+.dochead{padding:72px 0 44px;border-bottom:1px solid var(--line)}
+.dochead .lede{color:var(--mute);font-size:19px;max-width:60ch;margin:22px 0 0}
+
+/* contact card */
+.contact{border:1px solid rgba(201,169,97,.4);background:var(--brass-soft);padding:30px 32px;margin:40px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.contact .label{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin:0 0 10px}
+.contact .email{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:clamp(24px,3.4vw,34px);font-weight:700;text-decoration:none;color:var(--bone);word-break:break-all}
+.contact .email:hover{color:var(--brass)}
+.contact p{margin:8px 0 0;color:var(--mute);font-size:15.5px}
+.contact ul{margin:8px 0 0;padding-left:18px;color:var(--mute);font-size:15.5px}
+.contact li{margin:3px 0}
+
+/* contents */
+.toc{padding:44px 0;border-bottom:1px solid var(--line)}
+.toc ol{list-style:none;margin:18px 0 0;padding:0;columns:2;column-gap:48px}
+.toc li{margin:0 0 9px;break-inside:avoid}
+.toc a{text-decoration:none;color:var(--mute);font-size:16px;display:flex;gap:12px}
+.toc a:hover{color:var(--bone)}
+.toc .n{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--brass);padding-top:3px}
+
+section{padding:60px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:none}
+.secnum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);display:block;margin-bottom:14px}
+.body{max-width:74ch}
+.body p{color:var(--mute);margin:16px 0}
+.body strong{color:var(--bone);font-weight:500}
+.body ol,.body ul{color:var(--mute);padding-left:22px;margin:16px 0}
+.body li{margin:9px 0}
+.body h3{margin-top:38px;color:var(--bone)}
+.body h4{margin-top:28px;color:var(--bone)}
+
+.note{border-left:2px solid var(--brass);padding:4px 0 4px 20px;margin:24px 0;color:var(--mute);font-size:15.5px}
+.path{font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--bone);background:var(--raise);border:1px solid var(--line);padding:2px 7px;white-space:nowrap;display:inline-block}
+
+.faq{border-top:1px solid var(--line);margin-top:34px}
+.q{border-bottom:1px solid var(--line);padding:26px 0;max-width:78ch}
+.q h4{margin-bottom:10px}
+.q p{color:var(--mute);margin:10px 0 0;font-size:16px}
+.q ol,.q ul{color:var(--mute);font-size:16px;padding-left:22px;margin:12px 0 0}
+.q li{margin:7px 0}
+
+footer{padding:56px 0 72px}
+.fgrid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:flex-start}
+.flinks{display:flex;gap:24px;flex-wrap:wrap;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.flinks a{color:var(--mute);text-decoration:none}
+.flinks a:hover,.flinks a:focus-visible{color:var(--brass)}
+.fmeta{color:var(--mute);font-size:14px;max-width:38ch}
+.fmeta .brand{color:var(--bone)}
+
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+
+@media (max-width:880px){
+  .contact{grid-template-columns:1fr;gap:24px;padding:26px}
+  .toc ol{columns:1}
+  .dochead{padding:52px 0 36px}
+  section{padding:48px 0}
+}
+@media (max-width:520px){.wrap{padding:0 20px}.navlinks{gap:16px;font-size:11px}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">W<span>N</span>N</a>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="support.html" aria-current="page">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </div>
+</nav>
+
+<header class="dochead">
+  <div class="wrap">
+    <p class="eyebrow">WNN Support</p>
+    <h1>Help with WNN</h1>
+    <p class="lede">Subscription questions, blocking problems, and everything else. WNN is made and supported by one person, and every email is read and answered by that person.</p>
+
+    <div class="contact">
+      <div>
+        <p class="label">Contact support</p>
+        <a class="email" href="mailto:wnnapp1@gmail.com">wnnapp1@gmail.com</a>
+        <p>Email is the only support channel. Most messages are answered within 1–2 business days.</p>
+      </div>
+      <div>
+        <p class="label">What to include</p>
+        <ul>
+          <li>Your iPhone model and iOS version</li>
+          <li>The WNN version, shown at the bottom of the app's settings screen</li>
+          <li>Which mode and schedule you were using</li>
+          <li>What you expected to happen, and what happened instead</li>
+          <li>A screenshot, if the problem is something you can see</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="toc">
+  <div class="wrap">
+    <p class="eyebrow">On this page</p>
+    <ol>
+      <li><a href="#basics"><span class="n">01</span> Getting started and permissions</a></li>
+      <li><a href="#cancel"><span class="n">02</span> Cancel a subscription</a></li>
+      <li><a href="#refund"><span class="n">03</span> Request a refund</a></li>
+      <li><a href="#restore"><span class="n">04</span> Restore purchases</a></li>
+      <li><a href="#trial"><span class="n">05</span> The 7-day free trial</a></li>
+      <li><a href="#plans"><span class="n">06</span> Switch between monthly and yearly</a></li>
+      <li><a href="#faq-blocking"><span class="n">07</span> Troubleshooting: blocking</a></li>
+      <li><a href="#faq-schedule"><span class="n">08</span> Troubleshooting: schedules and modes</a></li>
+      <li><a href="#faq-alerts"><span class="n">09</span> Troubleshooting: alarms and lock screen</a></li>
+      <li><a href="#faq-billing"><span class="n">10</span> Troubleshooting: billing</a></li>
+      <li><a href="#data"><span class="n">11</span> Your data, and deleting the app</a></li>
+      <li><a href="#report"><span class="n">12</span> Report a bug or request a feature</a></li>
+    </ol>
+  </div>
+</div>
+
+<section id="basics">
+  <div class="wrap body">
+    <span class="secnum">01 — Getting started</span>
+    <h2>Getting started and permissions</h2>
+    <p>WNN blocks apps using <strong>Screen Time</strong> and Apple's <strong>Family Controls</strong> framework. This is the only way an iPhone app is permitted to hide or block other apps, which means WNN cannot block anything until you grant that permission.</p>
+    <ol>
+      <li>Open WNN and choose a mode — Career, Student, Athlete, Custom, or Healthy.</li>
+      <li>When the system asks to allow Screen Time access, tap <strong>Allow</strong>. This prompt comes from iOS, not from WNN.</li>
+      <li>Choose the apps and categories you want blocked during your windows. This picker is provided by Apple, and your selection stays on your device.</li>
+      <li>Confirm your schedule. Blocking starts automatically when each window begins.</li>
+    </ol>
+    <div class="note">If you tapped <strong>Don't Allow</strong> by mistake, you can grant the permission later at <span class="path">Settings › Screen Time › App &amp; Website Activity</span>, then reopen WNN and set up your schedule again.</div>
+    <h3>Requirements</h3>
+    <ul>
+      <li>An iPhone running <strong>iOS 16 or later</strong>.</li>
+      <li><strong>Screen Time turned on</strong>, and not restricted by a Screen Time passcode set by someone else.</li>
+      <li>Notifications allowed, if you want WNN's alarms and reminders.</li>
+    </ul>
+    <p>If your device is managed by a school, employer, or a parent's Family Sharing account, the managing profile may prevent WNN from applying restrictions. In that case blocking will not work, and the restriction has to be lifted by whoever manages the device.</p>
+  </div>
+</section>
+
+<section id="cancel">
+  <div class="wrap body">
+    <span class="secnum">02 — Subscriptions</span>
+    <h2>Cancel a subscription</h2>
+    <p>WNN subscriptions are sold and billed by Apple, so cancellation happens in your Apple Account settings rather than inside WNN. There is nothing to email us about first — you can do this yourself in under a minute, and we cannot cancel it on your behalf.</p>
+    <h4>On your iPhone or iPad</h4>
+    <ol>
+      <li>Open the <strong>Settings</strong> app.</li>
+      <li>Tap your name at the very top of the screen.</li>
+      <li>Tap <strong>Subscriptions</strong>.</li>
+      <li>Tap <strong>WNN</strong> in the list of active subscriptions.</li>
+      <li>Tap <strong>Cancel Subscription</strong>, then confirm.</li>
+    </ol>
+    <h4>On a Mac</h4>
+    <ol>
+      <li>Open the <strong>App Store</strong> app.</li>
+      <li>Click your name in the bottom-left corner, then click <strong>Account Settings</strong>.</li>
+      <li>Scroll to <strong>Subscriptions</strong> and click <strong>Manage</strong>.</li>
+      <li>Click <strong>Edit</strong> next to WNN, then click <strong>Cancel Subscription</strong>.</li>
+    </ol>
+    <div class="note">Cancel at least <strong>24 hours before</strong> your renewal date. Apple processes renewals within the last 24 hours of a period, and a renewal that has already been charged will not be reversed by cancelling.</div>
+    <h4>What happens after you cancel</h4>
+    <ul>
+      <li>You keep full access until the end of the period you have already paid for.</li>
+      <li>Nothing renews after that, and you are not charged again.</li>
+      <li><strong>Healthy mode stays available</strong> — it does not require a subscription.</li>
+      <li>Your schedules and settings stay on your device. If you resubscribe later, they are still there.</li>
+    </ul>
+    <p>If you cannot find WNN in your subscription list, you may be signed in with a different Apple Account than the one used to subscribe. Check <span class="path">Settings › your name › Media &amp; Purchases</span> to see which account is active.</p>
+  </div>
+</section>
+
+<section id="refund">
+  <div class="wrap body">
+    <span class="secnum">03 — Subscriptions</span>
+    <h2>Request a refund</h2>
+    <p>Because Apple processes every payment, <strong>all refunds are issued by Apple</strong>. We do not receive your payment and have no ability to refund it directly. Apple decides each request under its own policy.</p>
+    <h4>How to ask Apple for a refund</h4>
+    <ol>
+      <li>Go to <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> in any browser.</li>
+      <li>Sign in with the Apple Account you used to subscribe.</li>
+      <li>Choose <strong>Request a refund</strong>, then choose a reason.</li>
+      <li>Select the WNN charge you want refunded, and submit.</li>
+    </ol>
+    <p>You can also start this from your iPhone: open the confirmation email from Apple for the charge, and tap <strong>Report a Problem</strong>. Apple usually responds within 24 to 48 hours, and refunds can take a few more days to appear on your statement.</p>
+    <div class="note">If Apple declines the request and you believe the charge was a genuine mistake — a duplicate charge, or a renewal you cancelled but were billed for anyway — email <a href="mailto:wnnapp1@gmail.com">wnnapp1@gmail.com</a>. We cannot issue the refund, but we can look at the purchase record on our side and give you something concrete to include in an appeal to Apple.</div>
+  </div>
+</section>
+
+<section id="restore">
+  <div class="wrap body">
+    <span class="secnum">04 — Subscriptions</span>
+    <h2>Restore purchases</h2>
+    <p>Restoring is what you do when you already pay for WNN but the app is showing the paywall — usually after reinstalling, getting a new iPhone, or updating iOS.</p>
+    <ol>
+      <li>Open WNN.</li>
+      <li>Go to the paywall or the subscription screen in settings.</li>
+      <li>Tap <strong>Restore Purchases</strong>.</li>
+      <li>Confirm with Face ID, Touch ID, or your Apple Account password if asked.</li>
+    </ol>
+    <p>Your subscription should be recognised within a few seconds and the paywall should disappear.</p>
+    <h4>If restoring does not work</h4>
+    <ul>
+      <li><strong>Check the Apple Account.</strong> A subscription can only be restored on the account that bought it. Look under <span class="path">Settings › your name › Media &amp; Purchases</span>, and make sure it matches.</li>
+      <li><strong>Check the subscription is still active.</strong> Under <span class="path">Settings › your name › Subscriptions</span>, an expired subscription appears under the inactive list and cannot be restored — it has to be purchased again.</li>
+      <li><strong>Check your connection.</strong> Restoring needs internet access to verify the receipt with Apple.</li>
+      <li><strong>Force quit and reopen WNN</strong>, then try once more.</li>
+      <li><strong>Family Sharing.</strong> WNN subscriptions are not shared through Family Sharing, so a subscription bought by a family member cannot be restored on your account.</li>
+    </ul>
+    <p>Still stuck? Email <a href="mailto:wnnapp1@gmail.com">wnnapp1@gmail.com</a> with the date of purchase and whether you bought the monthly or yearly plan, and we will check the purchase record.</p>
+  </div>
+</section>
+
+<section id="trial">
+  <div class="wrap body">
+    <span class="secnum">05 — Subscriptions</span>
+    <h2>The 7-day free trial</h2>
+    <ul>
+      <li>The trial lasts <strong>7 days</strong> and gives you everything in the app.</li>
+      <li>You will not be charged during the trial.</li>
+      <li>When the 7 days end, the subscription <strong>starts automatically</strong> at $1.99 per month or $9.99 per year, depending on the plan you chose.</li>
+      <li>To avoid being charged, cancel at least <strong>24 hours before</strong> the trial ends, using the steps in <a href="#cancel">Cancel a subscription</a>. You keep trial access for the remaining days.</li>
+      <li>The trial is available once per Apple Account. If you have used it before, subscribing again starts billing immediately.</li>
+    </ul>
+    <p>To see exactly when your trial ends, open <span class="path">Settings › your name › Subscriptions</span> and tap WNN. Apple shows the renewal date there.</p>
+  </div>
+</section>
+
+<section id="plans">
+  <div class="wrap body">
+    <span class="secnum">06 — Subscriptions</span>
+    <h2>Switch between monthly and yearly</h2>
+    <ol>
+      <li>Open <strong>Settings</strong>, tap your name, then tap <strong>Subscriptions</strong>.</li>
+      <li>Tap <strong>WNN</strong>.</li>
+      <li>Choose the other plan from the options listed.</li>
+    </ol>
+    <p>Moving from monthly to yearly usually takes effect straight away, and Apple credits the unused part of your current month. Moving from yearly to monthly usually takes effect at the end of the year you have paid for. Apple controls this timing and will show you what will happen before you confirm.</p>
+  </div>
+</section>
+
+<section id="faq-blocking">
+  <div class="wrap">
+    <span class="secnum">07 — Troubleshooting</span>
+    <h2>Blocking</h2>
+    <div class="faq">
+
+      <div class="q">
+        <h4>My apps are not being blocked at all</h4>
+        <p>Almost always a permission problem. Work through these in order:</p>
+        <ol>
+          <li>Open <span class="path">Settings › Screen Time</span> and confirm Screen Time is <strong>on</strong>.</li>
+          <li>Confirm WNN still has Screen Time access. If the permission was revoked, reopen WNN and it will ask again.</li>
+          <li>Open WNN and check that your schedule is <strong>active</strong>, not saved as a draft.</li>
+          <li>Check the current time falls inside one of your windows. A window that ended will not block anything.</li>
+          <li>Confirm the apps you expected to be blocked are actually selected in the app picker.</li>
+          <li>Restart the iPhone, then open WNN once so it can re-apply the schedule.</li>
+        </ol>
+      </div>
+
+      <div class="q">
+        <h4>WNN keeps asking for Screen Time permission again</h4>
+        <p>iOS revokes Family Controls access when Screen Time is turned off and on again, when a Screen Time passcode is changed, or after some system restores. Grant the permission again and re-confirm your schedule. If it happens repeatedly, check whether another Screen Time or parental-controls app is also managing restrictions on the device — two apps competing for the same system can revoke each other.</p>
+      </div>
+
+      <div class="q">
+        <h4>A blocked app still opens</h4>
+        <ul>
+          <li>The app may not be in your selection. Apple's picker groups some apps into categories, and a category does not always include every app you would expect.</li>
+          <li>Some system apps cannot be blocked by any third-party app. Apple does not allow it.</li>
+          <li>The website version of an app opened in a browser is separate from the app itself. Block the browser or the relevant website category as well.</li>
+          <li>If the app was already open when the window started, close it fully and reopen it.</li>
+        </ul>
+      </div>
+
+      <div class="q">
+        <h4>Do blocks survive a restart?</h4>
+        <p>Yes, in normal use — the schedule is registered with the system and is not cancelled by restarting. But if a restart happens right as a window is opening or closing, the change can be applied late. Opening WNN once after a restart makes it re-check the schedule immediately.</p>
+      </div>
+
+      <div class="q">
+        <h4>Can someone delete WNN to get around a block?</h4>
+        <p>Deleting the app removes its restrictions, which is required by Apple — no app is allowed to make itself undeletable. WNN is built as a commitment device, not a cage. It is meant to hold when you are tired or distracted, not when you are determined to break it.</p>
+      </div>
+
+      <div class="q">
+        <h4>How do I end a block early?</h4>
+        <p>Use the escape hatch in the app. It ends the current window deliberately rather than silently, and the app records it — so the choice stays visible to you instead of disappearing. There is no hidden way out, and no penalty for using it when you genuinely need to.</p>
+      </div>
+
+      <div class="q">
+        <h4>Blocking stopped after I updated iOS</h4>
+        <p>Major iOS updates sometimes clear Family Controls authorisation. Open WNN, grant Screen Time access again when prompted, and confirm your schedule is still active. If your app selection was cleared, reselect the apps you want blocked.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="faq-schedule">
+  <div class="wrap">
+    <span class="secnum">08 — Troubleshooting</span>
+    <h2>Schedules and modes</h2>
+    <div class="faq">
+
+      <div class="q">
+        <h4>My scheduled window did not start</h4>
+        <ol>
+          <li>Check the schedule is active and set for today. Some schedules run only on selected days.</li>
+          <li>Check the device time zone. Travelling across time zones shifts when windows open.</li>
+          <li>Check that Low Power Mode was not on for a long stretch — it can delay background work.</li>
+          <li>Open WNN. That alone re-syncs the schedule with the system.</li>
+        </ol>
+      </div>
+
+      <div class="q">
+        <h4>Can I change my mode after setting one up?</h4>
+        <p>Yes. Pick a different mode at any time from the modes screen. Changing modes replaces the active schedule, and any windows currently running end when the new schedule takes over.</p>
+      </div>
+
+      <div class="q">
+        <h4>My profession, sport, or class schedule does not match my real day</h4>
+        <p>The Career, Student, and Athlete schedules are researched starting points, not rules. Edit any window inside the mode, or switch to <strong>Custom</strong> and build the day exactly as it is.</p>
+      </div>
+
+      <div class="q">
+        <h4>Why does WNN ask for calendar access?</h4>
+        <p>Only to read events on your device so schedules can work around what is already booked. It is optional, it stays on the device, and WNN never uploads calendar data. You can refuse it and use WNN normally, or turn it off later at <span class="path">Settings › WNN › Calendars</span>.</p>
+      </div>
+
+      <div class="q">
+        <h4>What is included for free?</h4>
+        <p><strong>Healthy mode is free forever</strong>, with no trial and no subscription. Career, Student, Athlete, and Custom modes require a subscription after the 7-day trial.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="faq-alerts">
+  <div class="wrap">
+    <span class="secnum">09 — Troubleshooting</span>
+    <h2>Alarms and the lock screen</h2>
+    <div class="faq">
+
+      <div class="q">
+        <h4>I am not getting WNN's alarms or reminders</h4>
+        <ol>
+          <li>Open <span class="path">Settings › WNN › Notifications</span> and turn <strong>Allow Notifications</strong> on.</li>
+          <li>Turn on <strong>Sounds</strong>, or the alarm will arrive silently.</li>
+          <li>Check Focus modes. A Focus that silences notifications will silence WNN's too — add WNN as an allowed app in that Focus.</li>
+          <li>Check the ringer switch and volume.</li>
+          <li>Check <strong>Scheduled Summary</strong> is not holding WNN's notifications until later in the day.</li>
+        </ol>
+      </div>
+
+      <div class="q">
+        <h4>The lock screen widget is not showing</h4>
+        <ul>
+          <li>Live Activities need <strong>iOS 16.1 or later</strong>.</li>
+          <li>Open <span class="path">Settings › WNN</span> and turn <strong>Live Activities</strong> on.</li>
+          <li>The widget appears while a window is running and disappears when it ends — that is expected.</li>
+          <li>Low Power Mode can suppress or freeze Live Activities.</li>
+          <li>If it is stuck showing an old window, dismiss it by swiping, then open WNN to start a fresh one.</li>
+        </ul>
+      </div>
+
+      <div class="q">
+        <h4>The countdown looks wrong</h4>
+        <p>Force quit WNN and reopen it so the widget re-reads the schedule. If the time is still wrong, check that the device clock is set to update automatically at <span class="path">Settings › General › Date &amp; Time</span>.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="faq-billing">
+  <div class="wrap">
+    <span class="secnum">10 — Troubleshooting</span>
+    <h2>Billing</h2>
+    <div class="faq">
+
+      <div class="q">
+        <h4>I was charged after cancelling</h4>
+        <p>Cancelling within 24 hours of a renewal is usually too late — Apple has already begun processing it. Confirm the cancellation went through under <span class="path">Settings › your name › Subscriptions</span>, then request a refund at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</p>
+      </div>
+
+      <div class="q">
+        <h4>I paid but the app still shows the paywall</h4>
+        <p>Tap <strong>Restore Purchases</strong>, following the steps in <a href="#restore">Restore purchases</a>. If it does not clear, force quit WNN, check your internet connection, and try again. If it still shows, email us with your purchase date.</p>
+      </div>
+
+      <div class="q">
+        <h4>The charge is not the price shown on the website</h4>
+        <p>Prices are shown in US dollars. Apple converts to your local currency and adds any tax that applies where you live, so the final amount can differ. The exact price for your region is shown on the paywall before you confirm.</p>
+      </div>
+
+      <div class="q">
+        <h4>I need an invoice or receipt</h4>
+        <p>Apple issues all receipts. Find them at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> or in the emailed receipts from Apple. We do not have access to your payment details and cannot produce an invoice.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="data">
+  <div class="wrap body">
+    <span class="secnum">11 — Privacy</span>
+    <h2>Your data, and deleting the app</h2>
+    <p>WNN has <strong>no accounts and no sign-up</strong>. Your schedules, app selections, streaks, and settings live on your iPhone and are not uploaded to us. Because we never collect them, there is no account for us to delete on request.</p>
+    <p>Deleting WNN from your iPhone removes its data from the device and lifts any restrictions it had applied. If you want to keep the app but clear its history, use the reset option in the app's settings.</p>
+    <p>Deleting the app does <strong>not</strong> cancel your subscription. Cancel separately using the steps in <a href="#cancel">Cancel a subscription</a>.</p>
+    <p>The full detail — including what our subscription provider receives and your rights under the CCPA and GDPR — is in the <a href="privacy.html">privacy policy</a>.</p>
+  </div>
+</section>
+
+<section id="report">
+  <div class="wrap body">
+    <span class="secnum">12 — Contact</span>
+    <h2>Report a bug or request a feature</h2>
+    <p>Email <a href="mailto:wnnapp1@gmail.com">wnnapp1@gmail.com</a>. For bugs, the fastest fix comes from a message that includes your iPhone model, iOS version, WNN version, the mode you were using, and the steps that led to the problem. A screenshot or screen recording helps more than any description.</p>
+    <p>Feature requests are genuinely welcome, and several things in the app exist because someone wrote in. There is no promise that a request will be built, but every one is read.</p>
+    <p>For anything about billing that Apple could not resolve, include the purchase date and the plan you are on.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fgrid">
+    <div class="fmeta">
+      <a class="brand" href="index.html" style="text-decoration:none">W<span>N</span>N</a><br><br>
+      Operated by Matthew Ari Freedberg, an individual developer in the United States.<br><br>
+      <a href="mailto:wnnapp1@gmail.com">wnnapp1@gmail.com</a>
+    </div>
+    <div class="flinks">
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
